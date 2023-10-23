@@ -1,4 +1,18 @@
 <?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "mydatabase";
+
+/* instantiate a new database connection */
+$dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
+
+$sql = "SELECT * FROM `admins` WHERE username = 'admin'";
+$result = mysqli_query($dbConnection, $sql);
+$row = mysqli_fetch_assoc($result);
+
+echo $row["username"];
+
 echo '<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +29,16 @@ echo '<!DOCTYPE html>
                 <li><a href="#">Events</a></li>
                 <li><a href="#">Tickets</a></li>
                 <li><a href="#">Contact</a></li>
+            </ul>
+            <ul class="login">
+    <h2>Login</h2>
+    <form action="login.php" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <input type="submit" value="Login">
+    </form>
             </ul>
         </nav>
     </header>
