@@ -7,6 +7,8 @@ $dbname = "eventsdb";
 /* instantiate a new database connection */
 $dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
 
+$mysqli = new mysqli("localhost", "root", "", "eventsdb", 3306);
+
 $sql = "SELECT * FROM `admins` WHERE username = 'admin'";
 $result = mysqli_query($dbConnection, $sql);
 $row = mysqli_fetch_assoc($result);
@@ -20,23 +22,15 @@ $result = mysqli_query($dbConnection, $sql);
 // Your database connection code here
 
 $sql = "SELECT * FROM events";
+
 $result = mysqli_query($dbConnection, $sql);
+$row = mysqli_fetch_assoc($result);
 
-while ($row = mysqli_fetch_assoc($result)) {
-    $title = $row['title'];
-    $date = $row['date'];
-    $about = $row['about'];
-    $description = $row['description'];
 
-    echo '<div class="event-card">';
-    echo "<h2>$title</h2>";
-    echo "<p>Date: $date</p>";
-    echo "<p>About: $about</p>";
-    echo "<p>Description: $description</p>";
-    echo '</div>';
-}
 
-echo '<!DOCTYPE html>
+?>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Event Tickets</title>
@@ -69,12 +63,25 @@ echo '<!DOCTYPE html>
         <h1>Welcome to RRZ Tickets</h1>
         <p>Find and purchase tickets for your favorite events.</p>
         <div class="event-list">
-            <?php  ?>
+            <?php
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $title = $row['title'];
+                    $date = $row['date'];
+                    $about = $row['about'];
+                    $description = $row['description'];
+                    echo '<div class="event-card">';
+                    echo "<h2>$title</h2>";
+                    echo "<p>Date: $date</p>";
+                    echo "<p>About: $about</p>";
+                    echo "<p>Description: $description</p>";
+                    echo '</div>';
+                }
+            ?>
         </div>
     </main>
     <footer>
         <p>&copy; 2023 RRZ Tickets</p>
     </footer>
-    
+
 </body>
 </html>';
