@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "mydatabase";
+$dbname = "eventsdb";
 
 /* instantiate a new database connection */
 $dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
@@ -12,6 +12,29 @@ $result = mysqli_query($dbConnection, $sql);
 $row = mysqli_fetch_assoc($result);
 
 echo $row["username"];
+
+$sql = "SELECT * FROM events";
+$result = mysqli_query($dbConnection, $sql);
+
+
+// Your database connection code here
+
+$sql = "SELECT * FROM events";
+$result = mysqli_query($dbConnection, $sql);
+
+while ($row = mysqli_fetch_assoc($result)) {
+    $title = $row['title'];
+    $date = $row['date'];
+    $about = $row['about'];
+    $description = $row['description'];
+
+    echo '<div class="event-card">';
+    echo "<h2>$title</h2>";
+    echo "<p>Date: $date</p>";
+    echo "<p>About: $about</p>";
+    echo "<p>Description: $description</p>";
+    echo '</div>';
+}
 
 echo '<!DOCTYPE html>
 <html lang="en">
@@ -46,7 +69,7 @@ echo '<!DOCTYPE html>
         <h1>Welcome to RRZ Tickets</h1>
         <p>Find and purchase tickets for your favorite events.</p>
         <div class="event-list">
-            <!-- Event cards go here -->
+            <?php  ?>
         </div>
     </main>
     <footer>
@@ -55,4 +78,3 @@ echo '<!DOCTYPE html>
     
 </body>
 </html>';
-?>
