@@ -19,7 +19,6 @@ $sql = "SELECT * FROM events";
 $result = mysqli_query($dbConnection, $sql);
 
 
-// Your database connection code here
 
 $sql = "SELECT * FROM events";
 
