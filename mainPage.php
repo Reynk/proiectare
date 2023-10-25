@@ -19,7 +19,6 @@ $sql = "SELECT * FROM events";
 $result = mysqli_query($dbConnection, $sql);
 
 
-// Your database connection code here
 
 $sql = "SELECT * FROM events";
 
@@ -42,8 +41,8 @@ $row = mysqli_fetch_assoc($result);
     <header>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Events</a></li>
+                <li><a href="#">Pagina principala</a></li>
+                <li><a href="#">Eveniment</a></li>
                 <li><a href="#">Tickets</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
