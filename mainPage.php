@@ -7,21 +7,16 @@ $dbname = "eventsdb";
 /* instantiate a new database connection */
 $dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
 
-$mysqli = new mysqli("localhost", "root", "", "eventsdb", 3306);
+//$mysqli = new mysqli("localhost", "root", "", "eventsdb", 3306);
 
-$sql = "SELECT * FROM `admins` WHERE username = 'admin'";
-$result = mysqli_query($dbConnection, $sql);
-$row = mysqli_fetch_assoc($result);
+//$sql = "SELECT * FROM `admins` WHERE username = 'admin'";
+//$result = mysqli_query($dbConnection, $sql);
+//$row = mysqli_fetch_assoc($result);
+//
+//echo $row["username"];
 
-echo $row["username"];
-
+/* define the sql query and then use it to perform a query and assign the result */
 $sql = "SELECT * FROM events";
-$result = mysqli_query($dbConnection, $sql);
-
-
-
-$sql = "SELECT * FROM events";
-
 $result = mysqli_query($dbConnection, $sql);
 
 
@@ -63,6 +58,8 @@ $result = mysqli_query($dbConnection, $sql);
         <p>Find and purchase tickets for your favorite events.</p>
         <div class="event-list">
             <?php
+                /* while there are events in the database to be displayed
+                    iterate and show the events */
                 while ($row = mysqli_fetch_assoc($result)) {
                     $title = $row['title'];
                     $date = $row['date'];
