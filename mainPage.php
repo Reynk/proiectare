@@ -23,7 +23,7 @@ $result = mysqli_query($dbConnection, $sql);
 $sql = "SELECT * FROM events";
 
 $result = mysqli_query($dbConnection, $sql);
-$row = mysqli_fetch_assoc($result);
+
 
 
 
