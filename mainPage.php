@@ -31,6 +31,9 @@ $result = mysqli_query($dbConnection, $sql);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -55,7 +58,7 @@ $result = mysqli_query($dbConnection, $sql);
     </header>
     <main>
         <h1>Welcome to RRZ Tickets</h1>
-        <p>Find and purchase tickets for your favorite events.</p>
+        <div class="bilete-button"><p>Find and purchase tickets for your favorite events.</p><div>
         <div class="event-list">
             <?php
                 /* while there are events in the database to be displayed

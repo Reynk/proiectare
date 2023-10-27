@@ -7,15 +7,16 @@
 
 /* Set background color and font styles */
 body {
-    background-color: #f2f2f2;
+    background-color: #fcfcfc;
     font-family: Arial, sans-serif;
 }
 
 /* Style the header and navigation */
 header {
-    background-color: #333;
-    color: #fff;
+    background: linear-gradient(45deg, purple, pink);
+    color: #000000;
     padding: 20px;
+    border-radius: 10px;
 }
 
 nav {
@@ -30,9 +31,11 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+    align-items:center;
     width: 50%;
+    margin-left: 250px;
+    font-size: 30px;
 }
 
 .nav-links li {
@@ -44,25 +47,30 @@ nav {
     text-decoration: none;
     padding: 10px;
     transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
 .nav-links a:hover {
-    background-color: #fff;
-    color: #333;
+    background-color:purple;
+    color: #ffffff;
+    border-radius: 20px;
+    border-radius: 50px;
 }
 
 /* Style the main content */
 main {
     padding: 20px;
+    background-color: rgb(255, 255, 255);
 }
 
 h1 {
-    font-size: 36px;
+    font-size: 46px;
     margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
 }
 
 p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 20px;
 }
 
@@ -74,10 +82,11 @@ p {
 
 /* Style the footer */
 footer {
-    background-color: #333;
+    background: linear-gradient(45deg, purple, pink);
     color: #fff;
     padding: 20px;
     text-align: center;
+    border-radius: 10px;
 }
 
 /* Media queries for responsive design */
