@@ -6,6 +6,10 @@ $dbname = "eventsdb";
 
 /* instantiate a new database connection */
 $dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
+/* define the sql query and then use it to perform a query and assign the result */
+$sql = "SELECT * FROM events";
+$result = mysqli_query($dbConnection, $sql);
+
 
 //$mysqli = new mysqli("localhost", "root", "", "eventsdb", 3306);
 
@@ -15,9 +19,7 @@ $dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
 //
 //echo $row["username"];
 
-/* define the sql query and then use it to perform a query and assign the result */
-$sql = "SELECT * FROM events";
-$result = mysqli_query($dbConnection, $sql);
+
 
 
 
@@ -68,12 +70,22 @@ $result = mysqli_query($dbConnection, $sql);
                     $date = $row['date'];
                     $about = $row['about'];
                     $description = $row['description'];
-                    echo '<div class="event-card">';
-                    echo "<h2>$title</h2>";
-                    echo "<p>Date: $date</p>";
-                    echo "<p>About: $about</p>";
-                    echo "<p>Description: $description</p>";
-                    echo '</div>';
+                    echo '<table>';
+                    echo '<tr><th>Title</th><th>Date</th><th>About</th><th>Description</th><th></th></tr>';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $title = $row['title'];
+                        $date = $row['date'];
+                        $about = $row['about'];
+                        $description = $row['description'];
+                        echo '<tr>';
+                        echo "<td>$title</td>";
+                        echo "<td>$date</td>";
+                        echo "<td>$about</td>";
+                        echo "<td>$description</td>";
+                        echo '<td><button class="buy-ticket-button">Buy Ticket</button></td>';
+                        echo '</tr>';
+                    }
+                    echo '</table>';
                 }
             ?>
         </div>
