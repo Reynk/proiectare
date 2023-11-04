@@ -10,7 +10,7 @@
         
         include 'dbConnect.php';
 
-        $sql_insert = "INSERT INTO `events` (`id`, `title`, `date`, `about`, `description`) VALUES ('$id', '$title', '$date', '$about', '$description')";
+        $sql_insert = "INSERT INTO `events` (`id`, `title`, `date`, `about`, `description`) VALUES ('', '$title', '$date', '$about', '$description')";
         $result = mysqli_query($dbConnection, $sql_insert);
 
         header('Location: adminPage.php');
