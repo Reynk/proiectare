@@ -1,14 +1,10 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "eventsdb";
-
-/* instantiate a new database connection */
-$dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
+session_start();
+include 'dbConnect.php'; 
 /* define the sql query and then use it to perform a query and assign the result */
-$sql = "SELECT * FROM events";
+$sql = "SELECT * FROM orders WHERE username = '$_SESSION[username]'";
 $result = mysqli_query($dbConnection, $sql);
+echo $sql;
 ?>
 
 <!DOCTYPE html>
@@ -55,6 +51,32 @@ $result = mysqli_query($dbConnection, $sql);
 </header>
 <main>
     <h1>ORDER PAGE</h1>
+    <!-- for some reason the event list class messes up the table structure here -->
+    <div class="event-list">
+            <?php
+                /* while there are events in the database to be displayed
+                    iterate and show the events */
+                while ($row = mysqli_fetch_assoc($result)) {
+                    $event_title = $row['event_title'];
+                    // echo $event_title;
+                    $price = $row['price'];
+                    $size = $row['size'];
+                    echo '<table>';
+                    echo '<tr><th>Event Name</th><th>Price</th><th>Size</th><th></th></tr>';
+                    while ($row = mysqli_fetch_assoc($result)) {
+                        $event_title = $row['event_title'];
+                        $price = $row['price'];
+                        $size = $row['size']; 
+                        echo '<tr>';
+                        echo "<td>$event_title</td>";
+                        echo "<td>$price</td>";
+                        echo "<td>$size</td>";
+                        echo '</tr>';
+                    }
+                    echo '</table>';
+                }
+            ?>
+        </div>
 </main>
 <footer class="footer">
     <p>&copy; 2023 RRZ Tickets</p>

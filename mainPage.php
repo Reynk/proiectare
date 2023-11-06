@@ -1,11 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "eventsdb";
+session_start();
 
-/* instantiate a new database connection */
-$dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
+include 'dbConnect.php';
 /* define the sql query and then use it to perform a query and assign the result */
 $sql = "SELECT * FROM events";
 $result = mysqli_query($dbConnection, $sql);

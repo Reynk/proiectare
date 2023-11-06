@@ -1,25 +1,28 @@
 <?php
+session_start();
 function login() {
     // Check if the form has been submitted
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Retrieve the username and password from the form data
-        $username = $_POST['username'];
-        $password = $_POST['password'];
-        echo $username;
-        echo $password;
+        $_SESSION["username"] = $_POST['username'];
+        $_SESSION["password"] = $_POST['password'];
+        // $_SESSION = $_POST['username'];
+        // $password = $_POST['password'];
+        // echo $username;
+        // echo $password;
 
 
         include 'dbConnect.php';
         
         // Validate the input
-        if (empty($username) || empty($password)) {
+        if (empty($_SESSION["username"]) || empty($_SESSION["password"])) {
             echo "Please enter a username and password";
         } else {
             // Check if the username and password are correct
             /* TODO: IMPLEMENT CHECK AGAINST THE DB */
 
             // Define sql query for admins table
-            $sql = "SELECT * FROM admins WHERE username='$username' AND password='$password'";
+            $sql = "SELECT * FROM admins WHERE username='$_SESSION[username]' AND password='$_SESSION[password]'";
             $result = mysqli_query($dbConnection, $sql);
             
             // Attempt admin login
@@ -31,7 +34,7 @@ function login() {
 
             } else {
                 // Attempt user login
-                $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+                $sql = "SELECT * FROM users WHERE username='$_SESSION[username]' AND password='$_SESSION[password]'";
                 $result = mysqli_query($dbConnection, $sql);
                 if (mysqli_num_rows($result) == 1) {
                     echo "Login successful";

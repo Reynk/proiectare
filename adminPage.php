@@ -1,15 +1,13 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "eventsdb";
-
+session_start();
 /* instantiate a new database connection */
 include 'dbConnect.php';
 
 /* define the sql query and then use it to perform a query and assign the result */
 $sql = "SELECT * FROM events";
 $result = mysqli_query($dbConnection, $sql);
+echo $_SESSION["username"];
+echo $_SESSION["password"];
 ?>
 
 <!DOCTYPE html>
@@ -27,10 +25,7 @@ $result = mysqli_query($dbConnection, $sql);
     <header>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Acasa</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Bilete</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="logout.php">LOGOUT</a></li>
             </ul>
         </nav>
     </header>
@@ -91,51 +86,3 @@ $result = mysqli_query($dbConnection, $sql);
 </html>';
 
 
-// Create event
-if (isset($_POST['create_event'])) {
-    $event_name = $_POST['event_name'];
-    $event_date = $_POST['event_date'];
-    $event_location = $_POST['event_location'];
-
-    $sql = "INSERT INTO events (event_name, event_date, event_location) VALUES ('$event_name', '$event_date', '$event_location')";
-
-    if ($dbConnection->query($sql) === TRUE) {
-        echo "Event created successfully";
-    } else {
-        echo "Error creating event: " . $dbConnection->error;
-    }
-}
-
-// Update event
-if (isset($_POST['update_event'])) {
-    $event_id = $_POST['event_id'];
-    $event_name = $_POST['event_name'];
-    $event_date = $_POST['event_date'];
-    $event_location = $_POST['event_location'];
-
-    $sql = "UPDATE events SET event_name='$event_name', event_date='$event_date', event_location='$event_location' WHERE id=$event_id";
-
-    if ($dbConnection->query($sql) === TRUE) {
-        echo "Event updated successfully";
-    } else {
-        echo "Error updating event: " . $dbConnection->error;
-    }
-}
-
-// Delete event
-if (isset($_POST['delete_event'])) {
-    $event_id = $_POST['event_id'];
-
-    $sql = "DELETE FROM events WHERE id=$event_id";
-
-    if ($dbConnection->query($sql) === TRUE) {
-        echo "Event deleted successfully";
-    } else {
-        echo "Error deleting event: " . $dbConnection->error;
-    }
-}
-
-// Close database connection
-$dbConnection->close();
-
-?>

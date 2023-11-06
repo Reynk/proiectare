@@ -1,11 +1,7 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "eventsdb";
+session_start();
+include 'dbConnect.php';
 
-/* instantiate a new database connection */
-$dbConnection = mysqli_connect("localhost", "root", "", "eventsdb", 3306);
 /* define the sql query and then use it to perform a query and assign the result */
 $sql = "SELECT * FROM events";
 $result = mysqli_query($dbConnection, $sql);
@@ -41,10 +37,10 @@ $result = mysqli_query($dbConnection, $sql);
     <header>
         <nav>
             <ul class="nav-links">
-                <li><a href="#">Acasa</a></li>
-                <li><a href="#">Events</a></li>
-                <li><a href="#">Bilete</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="mainPage.php">Home</a></li>
+                <li><a href="tickets.php">Tickets</a></li>
+                <li><a href="order.php">Order history</a></li>
+                <li><a href="contact.php">Contact</a></li>
             </ul>
         </nav>
     </header>
