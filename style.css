@@ -15,10 +15,20 @@ body {
 header {
     background: linear-gradient(45deg, purple, pink);
     color: #000000;
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
+
 }
 
+.footer {
+    background: linear-gradient(45deg, purple, pink);
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+}
 nav {
     display: flex;
     justify-content: space-between;
@@ -58,20 +68,14 @@ nav {
 }
 
 /* Style the main content */
-main {
-    padding: 20px;
-    background-color: rgb(255, 255, 255);
-}
 
-h1 {
-    font-size: 46px;
-    margin-bottom: 20px;
-    font-family: 'Poppins', sans-serif;
-}
 
-p {
+
+
+#p2 {
     font-size: 20px;
     margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9);
 }
 
 td {
@@ -82,15 +86,6 @@ td {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 20px;
-}
-
-/* Style the footer */
-footer {
-    background: linear-gradient(45deg, purple, pink);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    border-radius: 10px;
 }
 
 /* Media queries for responsive design */
@@ -158,3 +153,48 @@ footer {
         opacity: 1;
     }
 }
+h1 {
+    background-color: rgba(119, 22, 111, 0.2); /* Replace (0, 0, 255) with your desired color and adjust the last value (0.3) for transparency */
+    padding: 20px;
+    text-align: center;
+    text-align: 
+    font-size: 50px;
+}
+.rainbow {
+ font-size: 50px;
+ background: -webkit-linear-gradient(rgb(255, 5, 201), rgb(255, 120, 215), indigo, rgb(200,30,100));
+ -webkit-background-clip: text;
+ -webkit-text-fill-color: transparent;
+}
+
+.bg-image {
+    background-image: url('resources/2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+}
+.bg-image .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 60%;
+    text-align: center;
+    font-size: 22px;
+}
+.bg-image .content header, .bg-image .content header, .bg-image .content footer {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 20px;
+    text-align: center;
+}
+
+#p1 {
+
+ }
+
+ .rainbow2 {
+    background: -webkit-linear-gradient(rgb(147, 23, 219), rgb(39, 13, 46), indigo, rgb(0, 255, 213));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+   }
