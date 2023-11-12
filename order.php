@@ -52,29 +52,27 @@ echo $sql;
 <main>
     <h1>ORDER PAGE</h1>
     <!-- for some reason the event list class messes up the table structure here -->
-    <div class="event-list">
+    <div class="evenst-list">
             <?php
                 /* while there are events in the database to be displayed
                     iterate and show the events */
-                while ($row = mysqli_fetch_assoc($result)) {
-                    $event_title = $row['event_title'];
-                    // echo $event_title;
-                    $price = $row['price'];
-                    $size = $row['size'];
                     echo '<table>';
-                    echo '<tr><th>Event Name</th><th>Price</th><th>Size</th><th></th></tr>';
+                    echo '<tr><th>Event Name</th><th>Price</th><th>Size</th></tr>';
+                    
+                    // Iterate and show the events
                     while ($row = mysqli_fetch_assoc($result)) {
                         $event_title = $row['event_title'];
                         $price = $row['price'];
-                        $size = $row['size']; 
+                        $size = $row['size'];
+                    
                         echo '<tr>';
                         echo "<td>$event_title</td>";
                         echo "<td>$price</td>";
                         echo "<td>$size</td>";
                         echo '</tr>';
                     }
+                    
                     echo '</table>';
-                }
             ?>
         </div>
 </main>

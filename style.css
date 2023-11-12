@@ -77,8 +77,20 @@ nav {
     color: rgba(255, 255, 255, 0.9);
 }
 
-td {
-    text-align: justify-all;
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
 }
 
 .event-list {
