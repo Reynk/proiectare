@@ -89,7 +89,9 @@ $result = mysqli_query($dbConnection, $sql);
             </div>
 </main>
 <footer>
-    <p>&copy; 2023 RRZ Tickets</p>
+    <div class="footer">
+        <p id="p1">&copy; 2023 RRZ Tickets</p>
+    </div>
 </footer>
 
 </body>
