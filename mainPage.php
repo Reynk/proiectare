@@ -70,8 +70,10 @@
         <h3 class="rainbow2"><p id="p1">Mobile-Friendly: Purchase tickets on the go with our mobile-responsive site.</p>
             
         <h3 class="rainbow2"><p id="p1">RizzHub: Your Simple Solution to Unforgettable Experiences!</p>
+        </div></div>
+
             <div class="footer">
-                <p id="p2">&copy; 2023 RRZ Tickets</p>
+                <p id="p1">&copy; 2023 RRZ Tickets</p>
             </div>
 
 </body>
