@@ -28,7 +28,7 @@
                 <input type="text" id="username" name="username"><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" class="custom-button">
             </form>
         </ul>
         <div id="registerPopup" class="popup">
@@ -38,7 +38,7 @@
                 <input type="text" id="username" name="username"><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Register">
+                <input type="submit" value="Register" class="custom-button">
             </form>
         </div>
     </nav>
