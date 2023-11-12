@@ -69,18 +69,19 @@ $result = mysqli_query($dbConnection, $sql);
                     echo '<table>';
                     echo '<tr><th>Title</th><th>Date</th><th>About</th><th>Description</th><th></th></tr>';
                     while ($row = mysqli_fetch_assoc($result)) {
-//                        $image = $row['image'];
+                        $image = $row['image'];
                         $title = $row['title'];
                         $date = $row['date'];
                         $about = $row['about'];
                         $description = $row['description'];
                         echo '<tr>';
-//                        echo "<td><img src="$image" alt="logo"></td>";
+                        echo '<td><img src="data:image/jpeg;base64,'.base64_encode($image).'" alt="logo"></td>';
+                        //    echo "<td><img src="$image" alt="logo"></td>";
                         echo "<td>$title</td>";
                         echo "<td>$date</td>";
                         echo "<td>$about</td>";
                         echo "<td>$description</td>";
-                        echo '<td><button class="buy-ticket-button">Buy Ticket</button></td>';
+//                        echo '<td><button class="buy-ticket-button">Buy Ticket</button></td>';
                         echo '</tr>';
                     }
                     echo '</table>';
