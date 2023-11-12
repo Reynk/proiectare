@@ -38,7 +38,7 @@ $result = mysqli_query($dbConnection, $sql);
         <nav>
             <ul class="nav-links">
                 <li><a href="mainPage.php">Home</a></li>
-                <li><a href="tickets.php">Tickets</a></li>
+                <li><a href="userPage.php">Tickets</a></li>
                 <li><a href="order.php">Order history</a></li>
                 <li><a href="contact.php">Contact</a></li>
             </ul>
