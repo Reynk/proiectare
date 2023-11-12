@@ -66,12 +66,6 @@ $result = mysqli_query($dbConnection, $sql);
                 <?php
                 /* while there are events in the database to be displayed
                     iterate and show the events */
-                while ($row = mysqli_fetch_assoc($result)) {
-//                    $image = $row['image'];
-                    $title = $row['title'];
-                    $date = $row['date'];
-                    $about = $row['about'];
-                    $description = $row['description'];
                     echo '<table>';
                     echo '<tr><th>Title</th><th>Date</th><th>About</th><th>Description</th><th></th></tr>';
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -90,7 +84,7 @@ $result = mysqli_query($dbConnection, $sql);
                         echo '</tr>';
                     }
                     echo '</table>';
-                }
+
                 ?>
             </div>
 </main>
