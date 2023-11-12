@@ -63,7 +63,6 @@ nav {
 .nav-links a:hover {
     background-color:purple;
     color: #ffffff;
-    border-radius: 20px;
     border-radius: 50px;
 }
 
@@ -152,14 +151,15 @@ td {
     .nav-links li:nth-child(4).fade {
         opacity: 1;
     }
+<<<<<<< Updated upstream
 }
 h1 {
     background-color: rgba(119, 22, 111, 0.2); /* Replace (0, 0, 255) with your desired color and adjust the last value (0.3) for transparency */
     padding: 20px;
     text-align: center;
-    text-align: 
     font-size: 50px;
 }
+
 .rainbow {
  font-size: 50px;
  background: -webkit-linear-gradient(rgb(255, 5, 201), rgb(255, 120, 215), indigo, rgb(200,30,100));
@@ -198,3 +198,82 @@ h1 {
     -webkit-text-fill-color: transparent;
     
    }
+
+    .contact-box {
+        background-color: #ffdde1;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.5;
+        text-align: center;
+        font-family: Nato Sans, sans-serif;
+    }
+
+    .pagina-ctc {
+        background-color: #ffebec;
+    }
+
+    .submit-box {
+        background-color: #ffc0cb;
+        padding: 20px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+        line-height: 1.5;
+        text-align: center;
+        font-family: Arial, sans-serif;
+    }
+
+    .form-group {
+        display: inline-block;
+        width: 30%;
+        margin: 10px;
+    }
+
+    .form-group label {
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    .custom-button {
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #input-1 {
+        background-color: rgba(255, 255, 255, 0.7);
+        border: 2px solid #ccc;
+        padding: 8px;
+        color: #333;
+        transition: all 0.3s;
+        font-weight: bold;
+    }
+
+    #input-1:focus {
+        border-color: #ff69b4;
+    }
+
+    #input-1:hover {
+        background-color: rgba(255, 182, 225, 0.9);
+    }
+
+    #input-1::placeholder {
+        color: #888;
+    }
+
+
+
