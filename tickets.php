@@ -44,7 +44,7 @@ $result = mysqli_query($dbConnection, $sql);
                 <input type="text" id="username" name="username"><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" class="custom-button">
             </form>
         </ul>
         <div id="registerPopup" class="popup">
@@ -54,14 +54,13 @@ $result = mysqli_query($dbConnection, $sql);
                 <input type="text" id="username" name="username"><br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Register">
+                <input type="submit" value="Register" class="custom-button">
             </form>
         </div>
     </nav>
 </header>
 <main>
-    <h1>Welcome to RRZ Tickets</h1>
-    <div class="bilete-button"><p>Find and purchase tickets for your favorite events.</p><div>
+    <h1>Upcoming events</h1>
             <div class="event-list">
                 <?php
                 /* while there are events in the database to be displayed

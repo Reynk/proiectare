@@ -77,7 +77,7 @@ $result = mysqli_query($dbConnection, $sql);
         </div>
         <div class="form-group">
             <label for="last_name">Last Name</label>
-            <input type="text" id="input-1" name=last_name" required>
+            <input type="text" id="input-1" name="last_name" required>
         </div>
         <div class="form-group">
             <label for="email">Email Address</label>

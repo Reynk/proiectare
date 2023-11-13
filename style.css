@@ -29,6 +29,7 @@ header {
     text-align: center;
     padding: 10px;
 }
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -58,6 +59,19 @@ nav {
     padding: 10px;
     transition: all 0.3s ease;
     border-radius: 15px;
+}
+
+.admin-button {
+    background-color: rgb(234, 225, 229); /* Green */
+    border: none;
+    color: rgb(0, 0, 0);
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
 }
 
 .nav-links a:hover {
@@ -139,6 +153,7 @@ login.button:hover {
     background-color: #0056b3;
 }
 
+
 .event-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -209,7 +224,7 @@ login.button:hover {
     .nav-links li:nth-child(4).fade {
         opacity: 1;
     }
-<<<<<<< Updated upstream
+
 }
 h1 {
     background-color: rgba(119, 22, 111, 0.2); /* Replace (0, 0, 255) with your desired color and adjust the last value (0.3) for transparency */
