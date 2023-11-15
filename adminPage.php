@@ -68,8 +68,14 @@ echo $_SESSION["password"];
                         echo "<td>$about</td>";
                         echo "<td>$description</td>";
                         echo '<td><button class="admin-button">Update Information</button></td>';
-                        echo '<td><button class="admin-button">Delete Event</button></td>';
+                        echo '<td>';
+                        echo '<form action="deleteEvent.php" method="post">';
+                        echo '<input type="hidden" name="event_id" value="' . $row['id'] . '">';
+                        echo '<button type="submit" class="admin-button">Delete Event</button>';
+                        echo '</form>';
+                        echo '</td>';
                         echo '</tr>';
+
                     }
                     echo '</table>';
                     ?>
