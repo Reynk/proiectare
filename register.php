@@ -1,4 +1,4 @@
-<?php // Connect to the database
+<?php
 // Define the function to insert user data into the database
 function insertUser() {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {

@@ -38,7 +38,7 @@ function login() {
                 $result = mysqli_query($dbConnection, $sql);
                 if (mysqli_num_rows($result) == 1) {
                     echo "Login successful";
-                    header("Location: userPage.php");
+                    header("Location: tickets.php");
                 } else {
                     // Login failed
                     echo "Incorrect username or password";

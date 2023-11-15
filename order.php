@@ -27,26 +27,32 @@ echo $sql;
             <li><a href="order.php">Order history</a></li>
             <li><a href="contact.php">Contact</a></li>
         </ul>
-        <ul class="login">
-            <h2>Login</h2>
-            <form action="login.php" method="post">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Login">
-            </form>
-        </ul>
-        <div id="registerPopup" class="popup">
-            <form action="register.php" method="post">
-                <h2>Register</h2>
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username"><br><br>
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password"><br><br>
-                <input type="submit" value="Register">
-            </form>
-        </div>
+        <ul class="logout">
+                <?php if (isset($_SESSION['username'])) { ?>
+                    <form action="logout.php" method="post">
+                        <input type="submit" value="Logout" class="custom-button">
+                    </form>
+                <?php } else { ?>
+                    <h2>Login</h2>
+                    <form action="login.php" method="post">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br><br>
+                        <input type="submit" value="Login" class="custom-button">
+                    </form>
+                </ul>
+                <div id="registerPopup" class="popup">
+                    <form action="register.php" method="post">
+                        <h2>Register</h2>
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username"><br><br>
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password"><br><br>
+                        <input type="submit" value="Register" class="custom-button">
+                    </form>
+                </div>
+            <?php } ?>
     </nav>
 </header>
 <main>
