@@ -13,7 +13,7 @@ session_start();
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <style>
-       
+        /* */
     </style>
 </head>
 <body>
@@ -60,15 +60,16 @@ session_start();
     <div class="content"  style="padding-top: 10px;">
         <h1 class="rainbow" style="height: auto;">Welcome the the Rizz Hub!</h1>
         
-        <h3 class="rainbow2"><p>
+
 
         <h3 class="rainbow2"><p id="p1">Elevating Your Experience!</p>
 
-        <h3 class="rainbow2"><p id="p1">Welcome to RizzHub, your premier destination for hassle-free ticket purchases.</p>
-            <br><br><br>       
+        <h3 class="rainbow2"><p id="p1">Welcome to RizzHub,</p>
+        <h3 class="rainbow2"><p id="p1">Your premier destination for hassle-free ticket purchases.</p>
+
+            <br>
+
         <h3 class="rainbow2"><p id="p1">Here's why RizzHub stands out:</p>
-    
-     
 
         <h3 class="rainbow2"><p id="p1">Diverse Selection: From local gigs to global sensations, find tickets for all your favorite events.</p>
             
