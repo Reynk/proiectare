@@ -9,7 +9,6 @@
 body {
     background-color: #fcfcfc;
     font-family: Arial, sans-serif;
-    overflow: hidden; /*comanda pentru oprirea scroll a pagini principale */
 }
 
 /* Style the header and navigation */
@@ -18,7 +17,6 @@ header {
     color: #000000; /* culoare login/register */
     padding: 10px;
     border-radius: 10px;
-
 }
 
 .footer {
@@ -90,27 +88,27 @@ nav {
 
 .edit-row {
     background-color: #f2f2f2; /* Set your desired background color */
-  }
+}
 
-  .edit-row input {
+.edit-row input {
     width: 100%;
     padding: 8px;
     margin-bottom: 8px;
     box-sizing: border-box;
-  }
+}
 
-  .edit-row .admin-button {
+.edit-row .admin-button {
     background-color: #af4ca7; /* Set your desired button background color */
     color: white;
     padding: 10px 15px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-  }
+}
 
-  .edit-row .admin-button:hover {
+.edit-row .admin-button:hover {
     background-color: #45a049; /* Set your desired button hover background color */
-  }
+}
 
 .nav-links a:hover {
     background-color:purple;
@@ -119,9 +117,6 @@ nav {
 }
 
 /* Style the main content */
-
-
-
 
 #p2 {
     font-size: 20px;
@@ -191,7 +186,6 @@ login.button:hover {
     background-color: #0056b3;
 }
 
-
 .event-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -216,7 +210,6 @@ login.button:hover {
     padding: 5px;
     font-size: 16px;
     display: flex;
-    
 }
 
 .buy-ticket button {
@@ -243,184 +236,4 @@ login.button:hover {
 
     .nav-links {
         position: absolute;
-        right: 0;
-        height: 92vh;
-        top: 8vh;
-        background-color: #333;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 50%;
-        transform: translateX(100%);
-        transition: transform 0.5s ease-in;
-    }
-
-    .nav-links li {
-        opacity: 0;
-    }
-
-    .nav-links li a {
-        font-size: 24px;
-    }
-
-    .nav-active {
-        transform: translateX(0%);
-    }
-
-    .nav-links li:nth-child(1) {
-        transition: all 0.5s ease 0.2s;
-    }
-
-    .nav-links li:nth-child(2) {
-        transition: all 0.5s ease 0.4s;
-    }
-
-    .nav-links li:nth-child(3) {
-        transition: all 0.5s ease 0.6s;
-    }
-
-    .nav-links li:nth-child(4) {
-        transition: all 0.5s ease 0.8s;
-    }
-
-    .nav-links li:nth-child(1).fade {
-        opacity: 1;
-    }
-
-    .nav-links li:nth-child(2).fade {
-        opacity: 1;
-    }
-
-    .nav-links li:nth-child(3).fade {
-        opacity: 1;
-    }
-
-    .nav-links li:nth-child(4).fade {
-        opacity: 1;
-    }
-
-}
-h1 {
-    background-color: rgba(119, 22, 111, 0.2); /* Replace (0, 0, 255) with your desired color and adjust the last value (0.3) for transparency */
-    padding: 20px;
-    text-align: center;
-    font-size: 50px;
-}
-
-.rainbow {
- background: -webkit-linear-gradient(rgb(255, 5, 201), rgb(255, 120, 215), indigo, rgb(200,30,100));
- -webkit-background-clip: text;
- -webkit-text-fill-color: transparent;
-}
-
-.bg-image {
-    background-image: url('resources/3.jpg'); /*imaginea de fundal a mp */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-}
-.bg-image .content {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    height: 60%;
-    text-align: center;
-    font-size: 22px;
-}
-.bg-image .content header, .bg-image .content header, .bg-image .content footer {
-    background-color: rgba(255, 255, 255, 0.7);
-    padding: 20px;
-    text-align: center;
-}
-
-#p1 {
-
- }
-
- .rainbow2 {
-    background: -webkit-linear-gradient(darkmagenta,black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-     font-size: 28px ;
-   }
-
-    .contact-box {
-        background-color: #ffdde1;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        line-height: 1.5;
-        text-align: center;
-        font-family: Nato Sans, sans-serif;
-    }
-
-    .pagina-ctc {
-        background-color: #ffebec;
-    }
-
-    .submit-box {
-        background-color: #ffc0cb;
-        padding: 20px;
-        border-radius: 5px;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-        line-height: 1.5;
-        text-align: center;
-        font-family: Arial, sans-serif;
-    }
-
-    .form-group {
-        display: inline-block;
-        width: 30%;
-        margin: 10px;
-    }
-
-    .form-group label {
-        display: block;
-    }
-
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    textarea {
-        width: 100%;
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        box-sizing: border-box;
-        font-family: Arial, sans-serif;
-    }
-
-    .custom-button {
-        background-color: darkmagenta; /* culoarea butonului */
-        color: white;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-    #input-1 {
-        background-color: rgba(255, 255, 255, 0.7);
-        border: 2px solid #ccc;
-        padding: 8px;
-        color: #333;
-        transition: all 0.3s;
-        font-weight: bold;
-    }
-
-    #input-1:focus {
-        border-color: #ff69b4;
-    }
-
-    #input-1:hover {
-        background-color: rgba(255, 182, 225, 0.9);
-    }
-
-    #input-1::placeholder {
-        color: #888;
-    }
-
-
-
+        right:
