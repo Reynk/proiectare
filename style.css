@@ -9,7 +9,7 @@
 body {
     background-color: #fcfcfc;
     font-family: Arial, sans-serif;
-    overflow: hidden; /*comanda pentru oprirea scroll a pagini principale */
+    /* overflow: hidden; //comanda pentru oprirea scroll a pagini principale */
 }
 
 /* Style the header and navigation */
