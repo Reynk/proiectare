@@ -1,3 +1,10 @@
+<!-- /**
+ * This PHP file is responsible for displaying the order history of a user.
+ * It retrieves the orders from the database based on the user's session username.
+ * The retrieved orders are then displayed in a table format on the web page.
+ * The user can access this page after logging in and it is part of an event ticketing system.
+ */ -->
+
 <?php
 session_start();
 include 'dbConnect.php'; 

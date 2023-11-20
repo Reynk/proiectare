@@ -1,3 +1,9 @@
+<!--
+/**
+ * This file represents the admin page of the project.
+ * It is responsible for displaying the admin interface and handling admin-related functionality.
+ */
+  -->
 <?php
 session_start();
 /* instantiate a new database connection */

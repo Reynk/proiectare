@@ -1,3 +1,10 @@
+<!-- /**
+ * This PHP file is responsible for displaying the event tickets.
+ * It retrieves the events data from the database and renders it in an HTML table.
+ * If the user is logged in, it also provides the option to buy tickets for the events.
+ */ -->
+
+
 <?php
 session_start();
 include 'dbConnect.php';

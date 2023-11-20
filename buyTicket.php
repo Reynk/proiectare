@@ -1,3 +1,10 @@
+<!-- /**
+ * Function to insert an order into the database.
+ * Retrieves the username, event title, event id, price, and size from the form data.
+ * Calculates the total price based on the price and size.
+ * Inserts the order details into the 'orders' table in the database.
+ * Redirects the user to the 'order.php' page.
+ */ -->
 <?php
 function insertOrder()
 {

@@ -1,3 +1,8 @@
+<!-- /**
+ * Updates an event in the database based on the data received from a form submission.
+ * If the form data is empty, the event table is not updated for that field.
+ * ONLY UPDATES THE FILLED IN FIELDS
+ */ -->
 <?php
 function updateEvent()
 {

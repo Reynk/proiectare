@@ -1,3 +1,9 @@
+<!-- /**
+ * This file is the user page that displays a list of events and allows users to purchase tickets.
+ * It retrieves event data from the database and dynamically generates HTML to display the events.
+ * Users can also log in or log out using the provided form.
+ */ -->
+
 <?php
 session_start();
 include 'dbConnect.php';
@@ -14,11 +20,6 @@ $result = mysqli_query($dbConnection, $sql);
 //$row = mysqli_fetch_assoc($result);
 //
 //echo $row["username"];
-
-
-
-
-
 
 ?>
 

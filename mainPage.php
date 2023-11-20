@@ -1,4 +1,10 @@
-<?php 
+<!-- /**
+ * This is the main page of the website.
+ * It displays the home page content, including navigation, login/register forms, and ticket information.
+ * Users can navigate to different sections of the website, login/register, and view ticket details.
+ * The page also includes a footer with copyright information.
+ */ -->
+<?php  
 session_start();
 ?>
 
