@@ -12,11 +12,44 @@ function updateEvent()
 
         include 'dbConnect.php';
 
-        // Update the event in the database
-        $sql_update = "UPDATE `events` SET `title`='$title', `date`='$date', `about`='$about', `description`='$description', WHERE `id`='$eventId'";
+        // Start the SQL update query
+        $sql_update = "UPDATE `events` SET ";
+
+        // Check each variable and add it to the query if it's not empty
+        if (!empty($title)) {
+            $sql_update .= "`title`='$title', ";
+        }
+        if (!empty($date)) {
+            $sql_update .= "`date`='$date', ";
+        }
+        if (!empty($about)) {
+            $sql_update .= "`about`='$about', ";
+        }
+        if (!empty($description)) {
+            $sql_update .= "`description`='$description', ";
+        }
+        if (!empty($price)) {
+            $sql_update .= "`price`='$price', ";
+        }
+
+        // Remove the trailing comma from the SQL query
+        $sql_update = rtrim($sql_update, ', ');
+
+        // Finish the SQL query
+        $sql_update .= " WHERE `id`='$eventId'";
+
+        // Execute the SQL query
         $result = mysqli_query($dbConnection, $sql_update);
 
-        header('Location: adminPage.php');
+        // Debugging output
+        echo '<h3>query</h3>';
+        echo $sql_update;
+        echo '</br>';
+        echo '<h3>result</h3>';
+        echo $result;
+
+        // Redirect to the admin page
+        // header('Location: adminPage.php');
         exit();
     }
 }
