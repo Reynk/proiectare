@@ -17,10 +17,10 @@ function updateEvent()
 
         include 'dbConnect.php';
 
-        // Define the SQL update query
+        // Define the SQL update 
         $sql_update = "UPDATE `events` SET ";
 
-        // Check each variable and add it to the query if it's not empty
+        // check each variable and add it to the query if it's not empty
         if (!empty($title)) {
             $sql_update .= "`title`='$title', ";
         }
@@ -37,7 +37,7 @@ function updateEvent()
             $sql_update .= "`price`='$price', ";
         }
 
-        // Handle the uploaded image
+        // Process the uploaded image
         if (!empty($_FILES["image"]["name"])) {
             $target_dir = "uploads/";
             if (!file_exists($target_dir)) {
@@ -50,24 +50,24 @@ function updateEvent()
             }
         }
 
-        // Remove the trailing comma from the SQL query
+        // Remove trailing comma
         $sql_update = rtrim($sql_update, ', ');
 
-        // Finish the SQL query
+        // Finish SQL query
         $sql_update .= " WHERE `id`='$eventId'";
 
-        // Execute the SQL query
+        // Execute SQL query
         $result = mysqli_query($dbConnection, $sql_update);
 
-        // Debugging output
         echo '<h3>query</h3>';
         echo $sql_update;
         echo '</br>';
         echo '<h3>result</h3>';
         echo $result;
 
-        // Redirect to the admin page
-        // header('Location: adminPage.php');
+        $_SESSION['message'] = "Event updated";
+        // Redirect to admin page
+        header('Location: adminPage.php');
         exit();
     }
 }

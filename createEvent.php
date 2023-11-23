@@ -37,8 +37,8 @@
 
         mysqli_stmt_execute($stmt);
         */
-
-        // header('Location: adminPage.php');
+        $_SESSION['message'] = "Event created";
+        header('Location: adminPage.php');
         exit();
     }
 }

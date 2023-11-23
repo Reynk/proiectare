@@ -64,18 +64,18 @@ session_start();
 </header>
 <div class="bg-image">
     <div class="content"  style="padding-top: 10px;">
-        <h1 class="rainbow" style="height: auto;">Welcome the the Rizz Hub!</h1>
+        <h1 class="rainbow" style="height: auto;">Welcome the the RRZ Events!</h1>
         
 
 
         <h3 class="rainbow2"><p id="p1">Elevating Your Experience!</p>
 
-        <h3 class="rainbow2"><p id="p1">Welcome to RizzHub,</p>
+        <h3 class="rainbow2"><p id="p1">Welcome to RRZ Events,</p>
         <h3 class="rainbow2"><p id="p1">Your premier destination for hassle-free ticket purchases.</p>
 
             <br>
 
-        <h3 class="rainbow2"><p id="p1">Here's why RizzHub stands out:</p>
+        <h3 class="rainbow2"><p id="p1">Here's why RRZ Events stands out:</p>
 
         <h3 class="rainbow2"><p id="p1">Diverse Selection: From local gigs to global sensations, find tickets for all your favorite events.</p>
             
@@ -89,7 +89,7 @@ session_start();
             
         <h3 class="rainbow2"><p id="p1">Mobile-Friendly: Purchase tickets on the go with our mobile-responsive site.</p>
             
-        <h3 class="rainbow2"><p id="p1">RizzHub: Your Simple Solution to Unforgettable Experiences!</p>
+        <h3 class="rainbow2"><p id="p1">RRZ Events: Your Simple Solution to Unforgettable Experiences!</p>
         </div></div>
 
             <div class="footer">

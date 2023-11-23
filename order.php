@@ -11,7 +11,6 @@ include 'dbConnect.php';
 /* define the sql query and then use it to perform a query and assign the result */
 $sql = "SELECT * FROM orders WHERE username = '$_SESSION[username]'";
 $result = mysqli_query($dbConnection, $sql);
-echo $sql;
 ?>
 
 <!DOCTYPE html>
