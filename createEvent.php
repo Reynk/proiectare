@@ -26,7 +26,6 @@
         // Define sql query for events table
         $sql_insert = "INSERT INTO `events` (`title`, `date`, `about`, `description`, `price`, `image`) VALUES ('$title', '$date', '$about', '$description', '$price', '$target_file')";
         mysqli_query($dbConnection, $sql_insert);
-        echo $sql_insert;
         /*
 
         $sql_insert = "INSERT INTO `events` (`title`, `date`, `about`, `description`, `price`, `image`) VALUES (?, ?, ?, ?, ?, ?)";
