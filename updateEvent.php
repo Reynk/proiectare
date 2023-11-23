@@ -17,7 +17,7 @@ function updateEvent()
 
         include 'dbConnect.php';
 
-        // Start the SQL update query
+        // Define the SQL update query
         $sql_update = "UPDATE `events` SET ";
 
         // Check each variable and add it to the query if it's not empty
@@ -35,6 +35,19 @@ function updateEvent()
         }
         if (!empty($price)) {
             $sql_update .= "`price`='$price', ";
+        }
+
+        // Handle the uploaded image
+        if (!empty($_FILES["image"]["name"])) {
+            $target_dir = "uploads/";
+            if (!file_exists($target_dir)) {
+                mkdir($target_dir, 0777, true);
+            }
+            $target_file = $target_dir . basename($_FILES["image"]["name"]);
+            if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
+                echo "<script>console.log('$_FILES' );</script>";
+                $sql_update .= "`image`='$target_file', ";
+            }
         }
 
         // Remove the trailing comma from the SQL query

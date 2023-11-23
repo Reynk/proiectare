@@ -44,7 +44,7 @@ echo $_SESSION["password"];
             <div>
                 <ul class="login">
                     <h2>Create new event</h2>
-                    <form action="createEvent.php" method="post">
+                    <form action="createEvent.php" method="post" enctype="multipart/form-data">
                         <label for="title">title:</label>
                         <input type="text" id="title" name="title"><br><br>
                         <label for="date">date:</label>
@@ -54,12 +54,16 @@ echo $_SESSION["password"];
                         <input type="text" id="about" name="about"><br><br>
                         <label for="description">description:</label>
                         <input type="text" id="description" name="description"><br><br>
+                        <label for="price">price:</label>
+                        <input type="text" id="price" name="price"><br><br>
+                        <label for="image">image:</label>
+                        <input type="file" id="image" name="image"><br><br>
                         <!-- /* THIS NEEDS TWO NEW FIELDS: PRICE AND image
                                 EXAMPLE FOR IMAGE IS BELOW. THE UPDATE method
                                 NEEDS TO BE UPDATED ACCORDINGLY -->
                         <input type="submit" value="Create new event" class="admin-button">
                     </form>
-</br>
+                    </br>
                 </ul>
                 <div class="event-list">
                     <?php
@@ -81,7 +85,7 @@ echo $_SESSION["password"];
                         echo "<td>$description</td>";
                         echo "<td>$price</td>";
                         // echo "<td>$image</td";
-                        
+                    
 
                         echo '<td>';
                         echo '<form action="deleteEvent.php" method="post">';
@@ -92,8 +96,8 @@ echo $_SESSION["password"];
                         echo '</tr>';
 
                         echo '<tr class="edit-row">';
-                        echo '<form action="updateEvent.php" method="post">';
-                        // the bellow line may not get the row id, need to verify this
+                        echo '<form action="updateEvent.php" method="post" enctype="multipart/form-data">';
+                        // the below line may not get the row id, need to verify this
                         echo '<input type="hidden" name="event_id" value="' . $row['id'] . '">';
                         echo '  <td colspan="5">';
                         echo '    <input type="text" name="title" placeholder="Update Title">';
@@ -101,15 +105,14 @@ echo $_SESSION["password"];
                         echo '    <input type="text" name="about" placeholder="Update About">';
                         echo '    <input type="text" name="description" placeholder="Update Description">';
                         echo '    <input type="text" name="price" placeholder="Update Price">';
-                        // need to checkout how to upload an image to the database
-                        echo '    <input type="file" name="filename" id="myFile">';
+                        echo '    <input type="file" name="image" id="image">';
                         echo '  </td>';
                         echo '<td>';
-                        echo '    <button class="admin-button" type="submit"">Update Information</button>';
+                        echo '    <button class="admin-button" type="submit">Update Information</button>';
                         echo '</td>';
                         echo '</form>';
                         echo '</tr>';
-                        
+
                         // echo "<tr>";
                         // echo '<form action="createEvent.php" method="post">';
                         // echo '<p>asd</p>';
@@ -133,7 +136,7 @@ echo $_SESSION["password"];
                         // echo '<td><input type="text" name="image"></td>';
                         // echo '</form>';
                         // echo "</tr>";
-
+                    
                     }
                     echo '</table>';
                     ?>

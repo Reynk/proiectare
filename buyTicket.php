@@ -15,21 +15,22 @@ function insertOrder()
         $event_id = $_POST['id'];
         $price = $_POST['price'];
         $size = $_POST['size'];
-        
+
         $price = $price * $size;
         include 'dbConnect.php';
         // Define sql query for orders table
         $sql = "INSERT INTO `orders` (`order_id`, `username`, `event_title`, `event_id`, `price`, `size`) VALUES (NULL, '$username', '$event_title', '$event_id', '$price', '$size')";
 
         mysqli_query($dbConnection, $sql);
-        echo $username;
-        echo $event_title;
-        echo $event_id;
-        
-        echo '</br><p>price: </p>';
-        echo $price;
-        echo '</br><p>size: </p>';
-        echo $size;
+        // Prepare email
+        $to = $username;
+        $subject = "Purchase Confirmation";
+        $message = "Dear customer,\n\nYou have successfully purchased $size ticket(s) for $event_title. The total price is $price.\n\nThank you for your purchase!";
+        $headers = "From: noreply@rrz.com";
+
+        // Send email
+        mail($to, $subject, $message, $headers);
+
         header("Location: order.php");
     }
 }
